@@ -1,4 +1,6 @@
 def przywitanie(name: str, surname: str):
-    przywitanie="Cześć" +name+" "+surname+"!"
+    przywitanie = "Cześć" + name + " " + surname + "!"
     return przywitanie
-print(przywitanie("Arek","Król"))
+
+
+print(przywitanie("Arek", "Król"))

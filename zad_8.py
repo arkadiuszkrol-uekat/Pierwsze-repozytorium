@@ -2,9 +2,20 @@ import requests
 from typing import List
 import argparse
 
+
 class Brewery:
-    def __init__(self, id: str, name: str, brewery_type: str, address_1: str, city: str,
-                 state_province: str, postal_code: str, country: str, website_url: str):
+    def __init__(
+        self,
+        id: str,
+        name: str,
+        brewery_type: str,
+        address_1: str,
+        city: str,
+        state_province: str,
+        postal_code: str,
+        country: str,
+        website_url: str,
+    ):
         self.id = id
         self.name = name
         self.brewery_type = brewery_type
@@ -17,6 +28,7 @@ class Brewery:
 
     def __str__(self) -> str:
         return f"{self.name} ({self.brewery_type}) - {self.address_1}, {self.city}, {self.state_province}, {self.country} | {self.website_url}"
+
 
 # ---- argparse ----
 parser = argparse.ArgumentParser(description="Pobieranie browarów z API")
@@ -57,7 +69,7 @@ for item in data:
         state_province=item.get("state_province", ""),
         postal_code=item.get("postal_code", ""),
         country=item.get("country", ""),
-        website_url=item.get("website_url", "")
+        website_url=item.get("website_url", ""),
     )
     breweries.append(brewery)
 

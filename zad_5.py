@@ -1,7 +1,8 @@
-def czy_zawiera(lista: list, liczba:int)-> bool:
+def czy_zawiera(lista: list, liczba: int) -> bool:
     for element in lista:
-        if liczba==element:
+        if liczba == element:
             return True
     return False
 
-print(czy_zawiera([2,3,4],5))
+
+print(czy_zawiera([2, 3, 4], 5))
