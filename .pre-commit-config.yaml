@@ -1,7 +1,9 @@
 repos:
-- repo: https://github.com/pre-commit/mirrors-pycodestyle
-  rev: v2.10.0  # wersja pycodestyle
+- repo: local
   hooks:
     - id: pycodestyle
+      name: PEP8 check
+      entry: python -m pycodestyle
+      language: system
+      files: ^.*\.py$
       args: [--max-line-length=79, --exclude=.venv]
-      
