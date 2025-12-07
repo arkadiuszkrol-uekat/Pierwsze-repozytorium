@@ -10,7 +10,11 @@ class Library:
         self._phone = phone
 
     def __str__(self):
-        return f"Library: {self._city}, {self._street}, {self._zip_code}, open hours: {self._open_hours}, phone: {self._phone}"
+        return (
+            f"Library: {self._city}, {self._street}, {self._zip_code}, "
+            f"open hours: {self._open_hours}, "
+            f"phone: {self._phone}"
+        )
 
 
 class Employee:
@@ -35,7 +39,12 @@ class Employee:
         self._phone = phone
 
     def __str__(self):
-        return f"Employee: {self._first_name} {self._last_name}, hired: {self._hire_date}, birth date: {self._birth_date}, adress: {self._city}, {self._street}, {self._zip_code}, phone: {self._phone}"
+        return (
+            f"Employee: {self._first_name} {self._last_name}, "
+            f"hired: {self._hire_date}, birth date: {self._birth_date}, "
+            f"adress: {self._city}, {self._street}, {self._zip_code}, "
+            f"phone: {self._phone}"
+        )
 
 
 class Book:
@@ -56,7 +65,11 @@ class Book:
         self._title = title
 
     def __str__(self):
-        return f"\nBook: {self._title}, author: {self._author_name} {self._author_surname}, {self._number_of_pages} pages, publicated on: {self._publication_date}, in library: {self._library._city}"
+        return (
+            f"\nBook: {self._title}, author: {self._author_name} {self._author_surname}, "
+            f"{self._number_of_pages} pages, publicated on: {self._publication_date}, "
+            f"in library: {self._library._city}"
+        )
 
 
 class Order:
@@ -68,12 +81,19 @@ class Order:
 
     def __str__(self):
         books_str = "".join(str(book) for book in self._books)
-        return f"Order: {self._order_date}, Employee: {self._employee._first_name} {self._employee._last_name}, Student: {self._student._name}, Books:  {books_str}"
+        return (
+            f"Order: {self._order_date}, "
+            f"Employee: {self._employee._first_name} {self._employee._last_name}, "
+            f"Student: {self._student._name}, "
+            f"Books: {books_str}"
+        )
 
 
 # Tworzymy biblioteki
 lib1 = Library("Bytom", "Cyryna i Metodego", "41-909", "8-18", "123-456-789")
-lib2 = Library("Warszawa", "ul. Pola Mokotowskie", "32-909", "9-19", "987-654-321")
+lib2 = Library(
+    "Warszawa", "ul. Pola Mokotowskie", "32-909", "9-19", "987-654-321"
+)
 
 # Tworzymy książki
 book1 = Book(lib1, "2020-01-01", "Ewa", "Chodakowska", 200, "W drogę")
