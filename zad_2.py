@@ -1,7 +1,8 @@
 from zad_1 import Student
-        
+
+
 class Library:
-    def __init__(self, city, street, zip_code, open_hours:str, phone):
+    def __init__(self, city, street, zip_code, open_hours: str, phone):
         self._city = city
         self._street = street
         self._zip_code = zip_code
@@ -13,7 +14,17 @@ class Library:
 
 
 class Employee:
-    def __init__(self, first_name, last_name, hire_date, birth_date, city, street, zip_code, phone):
+    def __init__(
+        self,
+        first_name,
+        last_name,
+        hire_date,
+        birth_date,
+        city,
+        street,
+        zip_code,
+        phone,
+    ):
         self._first_name = first_name
         self._last_name = last_name
         self._hire_date = hire_date
@@ -28,7 +39,15 @@ class Employee:
 
 
 class Book:
-    def __init__(self, library, publication_date, author_name, author_surname, number_of_pages, title):
+    def __init__(
+        self,
+        library,
+        publication_date,
+        author_name,
+        author_surname,
+        number_of_pages,
+        title,
+    ):
         self._library = library
         self._publication_date = publication_date
         self._author_name = author_name
@@ -64,9 +83,36 @@ book4 = Book(lib2, "2021-11-30", "Kai", "Sa", 250, "ADC basics")
 book5 = Book(lib1, "2022-03-15", "Arek", "Król", 180, "Chess 2.0")
 
 # Tworzymy pracowników
-emp1 = Employee("Anna", "Kowal", "2020-01-01", "1990-05-05", "Warszawa", "ul. Kwiatowa 5", "00-001", "123-456-789")
-emp2 = Employee("Jan", "Nowak", "2019-02-10", "1985-03-15", "Kraków", "ul. Leśna 10", "30-002", "987-654-321")
-emp3 = Employee("Marta", "Wiśniewska", "2021-06-20", "1992-07-07", "Warszawa", "ul. Słoneczna 1", "00-003", "321-654-987")
+emp1 = Employee(
+    "Anna",
+    "Kowal",
+    "2020-01-01",
+    "1990-05-05",
+    "Warszawa",
+    "ul. Kwiatowa 5",
+    "00-001",
+    "123-456-789",
+)
+emp2 = Employee(
+    "Jan",
+    "Nowak",
+    "2019-02-10",
+    "1985-03-15",
+    "Kraków",
+    "ul. Leśna 10",
+    "30-002",
+    "987-654-321",
+)
+emp3 = Employee(
+    "Marta",
+    "Wiśniewska",
+    "2021-06-20",
+    "1992-07-07",
+    "Warszawa",
+    "ul. Słoneczna 1",
+    "00-003",
+    "321-654-987",
+)
 
 # Tworzymy studentów
 student1 = Student("Asia", [60, 70, 80])
